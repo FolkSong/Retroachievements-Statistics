@@ -102,7 +102,7 @@ class RetroAchievementsWebApiClient
 
 //Note: run from linux with php filename.php
 
-$RAConn = new RetroAchievementsWebApiClient("FolkSong", "pKbQDRdebSQL5pZ8Jm5uRhrEWNSv03EE");
+$RAConn = new RetroAchievementsWebApiClient("Username", "APIKEY");
 
 //Use full console IDs (slower, goes through unsupported consoles)
 $ConsoleIDs = $RAConn->GetConsoleIDs();
