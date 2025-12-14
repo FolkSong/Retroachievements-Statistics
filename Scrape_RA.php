@@ -49,7 +49,7 @@ class RetroAchievementsWebApiClient
     }
 }
 
-$RAConn = new RetroAchievementsWebApiClient("2BW4GY7IDk8W2vz73zbXSJ9DRxhB1NUa");
+$RAConn = new RetroAchievementsWebApiClient("APIKEY");
 
 //Note: run from linux with php filename.php
 
@@ -57,26 +57,6 @@ $RAConn = new RetroAchievementsWebApiClient("2BW4GY7IDk8W2vz73zbXSJ9DRxhB1NUa");
 
 //Use full list of console IDs
 $ConsoleIDs = $RAConn->GetConsoleIDs();
-
-//Supported consoles as of 2025 (comment both lines out for full dynamic list)
-//$ConsoleIDs_json = '[{"ID":"1","Name":"Mega Drive"},{"ID":"2","Name":"Nintendo 64"},{"ID":"3","Name":"SNES"},{"ID":"4","Name":"Game Boy"},{"ID":"5","Name":"Game Boy Advance"},{"ID":"6","Name":"Game Boy Color"},{"ID":"7","Name":"NES"},{"ID":"8","Name":"PC Engine"},{"ID":"9","Name":"Sega CD"},{"ID":"10","Name":"32X"},{"ID":"11","Name":"Master System"},{"ID":"12","Name":"PlayStation"},{"ID":"13","Name":"Atari Lynx"},{"ID":"14","Name":"Neo Geo Pocket"},{"ID":"15","Name":"Game Gear"},{"ID":"17","Name":"Atari Jaguar"},{"ID":"18","Name":"Nintendo DS"},{"ID":"19","Name":"Wii"},{"ID":"21","Name":"PlayStation 2"},{"ID":"23","Name":"Magnavox Odyssey 2"},{"ID":"24","Name":"Pokemon Mini"},{"ID":"25","Name":"Atari 2600"},{"ID":26,"Name":"DOS"},{"ID":"27","Name":"Arcade"},{"ID":"28","Name":"Virtual Boy"},{"ID":"29","Name":"MSX"},{"ID":"33","Name":"SG-1000"},{"ID":37,"Name":"Amstrad CPC"},{"ID":"38","Name":"Apple II"},{"ID":"39","Name":"Saturn"},{"ID":"40","Name":"Dreamcast"},{"ID":"41","Name":"PlayStation Portable"},{"ID":"43","Name":"3DO Interactive Multiplayer"},{"ID":"44","Name":"ColecoVision"},{"ID":"45","Name":"Intellivision"},{"ID":"46","Name":"Vectrex"},{"ID":"47","Name":"PC-8000/8800"},{"ID":"49","Name":"PC-FX"},{"ID":"51","Name":"Atari 7800"},{"ID":"53","Name":"WonderSwan"},{"ID":56,"Name":"Neo Geo CD"},{"ID":57,"Name":"Fairchild Channel F"},{"ID":63,"Name":"Watara Supervision"},{"ID":69,"Name":"Mega Duck"},{"ID":71,"Name":"Arduboy"},{"ID":72,"Name":"WASM-4"},{"ID":73,"Name":"Arcadia 2001"},{"ID":74,"Name":"Interton VC 4000"},{"ID":75,"Name":"Elektor TV Games Computer"},{"ID":76,"Name":"PC Engine CD/TurboGrafx-CD"},{"ID":77,"Name":"Atari Jaguar CD"},{"ID":78,"Name":"Nintendo DSi"},{"ID":80,"Name":"Uzebox"}]';
-//$ConsoleIDs = json_decode($ConsoleIDs_json);
-
-//PS2 only
-//$ConsoleIDs_json = '[{"ID":"21","Name":"Playstation 2"}]';
-//$ConsoleIDs = json_decode($ConsoleIDs_json);
-
-//Gamecube only
-//$ConsoleIDs_json = '[{"ID":"16","Name":"GameCube"}]';
-//$ConsoleIDs = json_decode($ConsoleIDs_json);
-
-//Wii only
-//$ConsoleIDs_json = '[{"ID":"19","Name":"Wii"}]';
-//$ConsoleIDs = json_decode($ConsoleIDs_json);
-
-//Standalone only
-//$ConsoleIDs_json = '[{"ID":"102","Name":"Standalone"}]';
-//$ConsoleIDs = json_decode($ConsoleIDs_json);
 
 $file = fopen('output.csv', 'w');
 // Try to force Excel to recognize UTF-8
